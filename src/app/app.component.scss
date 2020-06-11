@@ -1,0 +1,458 @@
+/**
+  * Name: Maria Qumayo
+  * Version: 1.0
+  * Date: 09/06/2020
+  * For: Integrove interview
+*/
+
+
+/*----- all-colour-variables ------*/
+
+$bambino: #40a2bd;
+$basic: #57d7c8;
+$bizniz: #71d37e;
+$bonanza: #a2ea5a;
+$dark-banbubo:#97ee52;
+$dark-basic:#97ee52;
+$dark-bizinz:#97ee52;
+$dark-bonanza:#97ee52;
+$icon-color: #97ee52;
+$top-nav-colour:#457cd7;
+$white: white;
+$get-quote-button: #57d7c8;
+
+/*-----mobile-bar styles ------*/
+
+nav ul {
+    background-color: $top-nav-colour;
+    overflow: hidden;
+    color: $white;
+    text-align: left;
+    margin: 0;
+    -webkit-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0px 17px 0px 21px;
+    text-align: left;
+}
+
+.handle {
+    width: 100%;
+    background-color: $top-nav-colour;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    cursor: pointer;
+    color: $white;
+    display: none;
+}
+
+#btn-get-quote-mobile {
+    text-align: left;
+    background-color: $get-quote-button;
+    color: $white;
+}
+
+#hamburger-menu-mobile {
+    float: right;
+    font-size: 16pt;
+}
+
+
+/*-----desktop-bar styles ------*/
+
+#top-bar .top-bar-content .content.phone:before {
+    content: "\f095";
+    color: $icon-color;
+}
+
+#top-bar .top-bar-content .content.address:before {
+    content: "\f003";
+    color: $icon-color;
+}
+
+#top-bar .top-bar-content .content.time:before {
+    content: "\f017";
+    color: $icon-color;
+}
+
+#top-bar {
+    position: relative;
+    z-index: 1;
+    background-color: #457cd7;
+    color: rgb(255, 255, 255);
+}
+
+#top-bar .top-bar-content .content {
+    position: relative;
+    display: inline-block;
+    padding: 0px 17px 0px 21px;
+    margin: 0px 6px;
+    overflow: hidden;
+}
+
+#top-bar .inner-wrap {
+    display: table;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 23px 0px 23px 0px;
+}
+
+#top-bar .top-bar-content {
+    display: table-cell;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#top-bar .top-bar-get-quote {
+    display: table-cell;
+    width: 100%;
+    text-align: right;
+    vertical-align: middle;
+}
+
+
+/*-----icon style ------*/
+
+#top-bar .top-bar-content .content:before {
+    content: "";
+    position: absolute;
+    font-family: "FontAwesome";
+    top: 0;
+    left: 0;
+}
+
+.mobile-nav-icon {
+    color: $icon-color;
+    font-size: 15px;
+    padding-right: 3%;
+    padding-left: 0%
+}
+
+
+/*-----button styles ------*/
+
+.btn-get-quote {
+    background-color: #57d7c8;
+    color: white;
+    padding: 13px 32px;
+    cursor: pointer;
+}
+
+.btn-get-quote:hover {
+    background: $bonanza;
+}
+
+
+/*------compare packages heading--------*/
+
+.compare-heading {
+    color: #329fbc;
+    text-align: center;
+    padding: 40px 32px;
+}
+
+
+/*--------header colours------------*/
+
+#bambino-header {
+    background-color: $bambino;
+}
+
+#basic-header {
+    background-color: $basic;
+}
+
+#bizniz-header {
+    background-color: $bizniz;
+}
+
+#bonanza-header {
+    background-color: $bonanza;
+}
+
+
+/*------HOVER BUTTON-------*/
+
+.columns:hover {
+    transform: scale(1.0);
+    #bambino-header {
+        background-color: #207d97;
+    }
+    #bambino-sign-up-button {
+        background-color: #207d97;
+        border-radius: 1.0em;
+    }
+    #bonanza-header {
+        background-color: #89db35;
+    }
+    #bonanza-sign-up-button {
+        background-color: #89db35;
+        border-radius: 1.0em;
+    }
+    #bizniz-header {
+        background-color: #5cc169;
+    }
+    #bizniz-sign-up-button {
+        background-color: #5cc169;
+        border-radius: 1.0em;
+    }
+    #basic-header {
+        background-color: #39c1b1;
+    }
+    #basic-sign-up-button {
+        background-color: #39c1b1;
+        border-radius: 1.0em;
+    }
+}
+
+
+/*--------feature-icon-check-styles--------*/
+
+.checks-false {
+    font-size: 20px;
+    color: rgb(193, 191, 194);
+    padding-right: 7%;
+}
+
+.basic-checks {
+    font-size: 20px;
+    color: $basic;
+    padding-right: 7%;
+}
+
+.bizniz-checks {
+    font-size: 20px;
+    color: $bizniz;
+    padding-right: 7%;
+}
+
+.bambino-checks {
+    font-size: 20px;
+    color: $bambino;
+    padding-right: 7%;
+}
+
+.bonanza-checks {
+    font-size: 20px;
+    color: $bonanza;
+    padding-right: 7%;
+}
+
+
+/*---------REACTIVE STYLES--------*/
+
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+    float: left;
+    width: 25%;
+    padding: 8px;
+}
+
+.columns .image-container {
+    height: 250px;
+    padding-bottom: 0%;
+    text-align: center;
+}
+
+.columns .image-container img {
+    filter: drop-shadow(30px 15px 20px rgb(190, 190, 190));
+    width: 45%;
+    height: auto;
+}
+
+.columns .description-container {
+    height: 50px;
+    padding-top: 0%;
+    padding-bottom: 44%;
+}
+
+.columns .description-container p {
+    line-height: 1.8em;
+    font-size: 11pt;
+    width: 75%;
+    color: grey;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+}
+
+.price .header {
+    color: $white;
+    font-size: 25px;
+    padding-bottom: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.price li {
+    border-bottom: 0.5px solid #f1f1f1;
+    background-color: $white;
+    padding-top: 20px;
+    padding-left: 30px;
+    text-align: left;
+    font-size: 17px;
+    height: 60px;
+    color: #848285;
+}
+
+.price .grey {
+    font-size: 20px;
+    text-align: center;
+    border-bottom: none;
+    padding-left: 5px;
+    height: 80px;
+    content: center;
+}
+
+
+/*-------price styles------*/
+
+sup,
+.small {
+    font-size: 0.5em;
+}
+
+h2 {
+    color: #59676a;
+    font-size: 2.0em;
+}
+
+.button {
+    background-color: rgb(163, 165, 163);
+    border: none;
+    color: $white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 55%
+}
+
+@media only screen and (max-width: 1200px) {
+    .columns {
+        width: 50%;
+    }
+    .columns .description-container p {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .columns {
+        width: 100%;
+    }
+    .columns .description-container p {
+        width: 100%;
+    }
+}
+
+
+/**ipad*/
+
+@media (width: 768px) {
+    .columns {
+        width: 50%;
+    }
+    .columns .description-container p {
+        width: 100%;
+    }
+}
+
+
+/**iPhone 5/SE*/
+
+@media (width: 320px) {
+    .columns {
+        width: 100%;
+    }
+    .columns .description-container p {
+        width: 100%;
+        line-height: 1.5em;
+    }
+    .columns .image-container {
+        height: 180px;
+    }
+}
+
+@media (width: 360px) {
+    .columns .image-container {
+        height: 190px;
+    }
+}
+
+@media (width: 411px) {
+    .columns .image-container {
+        height: 200px;
+    }
+}
+
+@media (width: 375px) {
+    .columns .image-container {
+        height: 200px;
+    }
+}
+
+@media (width: 768px) {
+    .columns .image-container {
+        height: 200px;
+    }
+}
+
+
+/*--------mobile-menu-mediaquery---------*/
+
+@media (max-width: 580px) {
+    nav ul {
+        max-height: 0px;
+    }
+    .desktop {
+        display: none;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+        text-align: left;
+    }
+    .handle {
+        display: block;
+    }
+}
+
+@media (min-width: 581px) {
+    .desktop {
+        display: block;
+    }
+    .showing {
+        display: none;
+        max-height: 0em;
+    }
+}

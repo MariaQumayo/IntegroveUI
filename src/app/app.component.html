@@ -1,0 +1,129 @@
+<!-- 
+    Name: Maria Qumayo
+    Version: 1.0
+    Date: 09/06/2020
+    For: Integrove interview
+ -->
+<!-- <button (click)="test()">Display Name</button>
+<input type="text" name="" id="Maria" /> -->
+
+<!--Desktop menu-->
+<div id="top-bar" class="desktop">
+    <div id="top-bar-inner">
+        <div class="inner-wrap">
+            <div class="top-bar-content">
+                <div class="inner">
+                    <span class="phone content">{{number}}</span>
+                    <span class="address content"> {{email}}</span>
+                    <span class="time content">{{hours}}</span>
+                </div>
+            </div>
+            <div class="top-bar-get-quote">
+                <div class="inner">
+                    <button class="btn btn-get-quote" type="button"> <b>Get a quote</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- mobile-->
+<nav class="header">
+    <ul class="showing" [style.max-height]="show === false ? '0em' : '20em'">
+        <li class="phone content"><i class="fa fa-phone mobile-nav-icon" aria-hidden="true"></i> {{number}}</li>
+        <li class="address content"><i class="fa fa-envelope-o mobile-nav-icon" aria-hidden="true"></i> {{email}}</li>
+        <li class="time content"><i class="fa fa-clock-o mobile-nav-icon" aria-hidden="true"></i> {{hours}}</li>
+    </ul>
+    <div class="handle">
+        <div (click)="toggle()"><i class="fa fa-bars" aria-hidden="true" id="hamburger-menu-mobile"></i></div>
+        <button class="btn" type="button" id="btn-get-quote-mobile"> Get a quote</button>
+    </div>
+</nav>
+
+<section>
+    <h3 class="compare-heading">{{mainHeading}}</h3>
+    <div class="columns">
+        <div class='image-container'><img src="assets/images/test1.png"></div>
+        <div class='description-container'>
+            <p> {{packages.Bambino.description}}</p>
+        </div>
+        <ul class="price">
+            <li class="header" id="bambino-header"><b>{{packages.Bambino.name}}</b></li>
+            <li class="grey">
+                <h2><sup>{{packages.Bambino.currency}}</sup> <b>{{packages.Bambino.price}}</b><span class="small">{{packages.Bambino.term}}</span></h2>
+            </li>
+            <li> <i *ngIf="packages.Bambino.domain === true" class="fa fa-check-circle bambino-checks" aria-hidden="true"></i><i *ngIf="packages.Bambino.domain === false" class="fa ffa-times checks-false" aria-hidden="true"> </i>co.za domain </li>
+            <li> <i *ngIf="packages.Bambino.WebsiteHosting === true" class="fa fa-check-circle bambino-checks" aria-hidden="true"></i><i *ngIf="packages.Bambino.WebsiteHosting === false" class="fa fa-times checks-false" aria-hidden="true"></i> Website hosting</li>
+            <li> <i *ngIf="packages.Bambino.BasicEmail === true" class="fa fa-check-circle bambino-checks" aria-hidden="true"></i><i *ngIf="packages.Bambino.BasicEmail === false" class="fa fa-times checks-false" aria-hidden="true"></i> Basic email</li>
+            <li> <i *ngIf="packages.Bambino.ContenteUpdates === true" class="fa fa-check-circle bambino-checks" aria-hidden="true"></i><i *ngIf="packages.Bambino.ContenteUpdates === false" class="fa fa-times checks-false" aria-hidden="true"></i> Contente updates</li>
+            <li> <i *ngIf="packages.Bambino.Maintenance === true" class="fa fa-check-circle bambino-checks" aria-hidden="true"></i><i *ngIf="packages.Bambino.Maintenance === false" class="fa fa-times checks-false" aria-hidden="true"></i>Maintenance</li>
+            <li> <i *ngIf="packages.Bambino.LandingPage === true" class="fa fa-check-circle bambino-checks" aria-hidden="true"></i><i *ngIf="packages.Bambino.LandingPage === false" class="fa fa-times checks-false" aria-hidden="true"></i>Landing page</li>
+            <li> <i *ngIf="packages.Bambino.ContactForm === true" class="fa fa-check-circle bambino-checks" aria-hidden="true"></i><i *ngIf="packages.Bambino.ContactForm === false" class="fa fa-times checks-false" aria-hidden="true"></i>Contact form</li>
+            <li class="grey"><a href="#" class="button" id="bambino-sign-up-button"><b>Sign Up</b></a></li>
+        </ul>
+    </div>
+
+    <div class="columns">
+        <div class='image-container'><img src="assets/images/test2.png"></div>
+        <div class='description-container'>
+            <p>{{packages.Basic.description}}</p>
+        </div>
+        <ul class="price">
+            <li class="header" id="basic-header"><b>{{packages.Basic.name}}</b></li>
+            <li class="grey">
+                <h2><sup>{{packages.Basic.currency}}</sup> <b>{{packages.Basic.price}}</b> <span class="small">{{packages.Basic.term}}</span></h2>
+            </li>
+            <li> <i *ngIf="packages.Basic.domain === true" class="fa fa-check-circle basic-checks" aria-hidden="true"></i><i *ngIf="packages.Basic.domain === false" class="fa ffa-times checks-false" aria-hidden="true"></i>co.za domain </li>
+            <li> <i *ngIf="packages.Basic.WebsiteHosting === true" class="fa fa-check-circle basic-checks" aria-hidden="true"></i><i *ngIf="packages.Basic.WebsiteHosting === false" class="fa fa-times checks-false" aria-hidden="true"></i>Website hosting</li>
+            <li> <i *ngIf="packages.Basic.BasicEmail === true" class="fa fa-check-circle basic-checks" aria-hidden="true"></i><i *ngIf="packages.Basic.BasicEmail === false" class="fa fa-times checks-false" aria-hidden="true"></i>Basic email</li>
+            <li> <i *ngIf="packages.Basic.ContenteUpdates === true" class="fa fa-check-circle basic-checks" aria-hidden="true"></i><i *ngIf="packages.Basic.ContenteUpdates === false" class="fa fa-times checks-false" aria-hidden="true"></i>Contente updates</li>
+            <li> <i *ngIf="packages.Basic.Maintenance === true" class="fa fa-check-circle basic-checks" aria-hidden="true"></i><i *ngIf="packages.Basic.Maintenance === false" class="fa fa-times checks-false" aria-hidden="true"></i>Maintenance</li>
+            <li> <i *ngIf="packages.Basic.LandingPage === true" class="fa fa-check-circle basic-checks" aria-hidden="true"></i><i *ngIf="packages.Basic.LandingPage === false" class="fa fa-times checks-false" aria-hidden="true"></i> Landing page</li>
+            <li> <i *ngIf="packages.Basic.ContactForm === true" class="fa fa-check-circle basic-checks" aria-hidden="true"></i><i *ngIf="packages.Basic.ContactForm === false" class="fa fa-times checks-false" aria-hidden="true"></i>Contact form</li>
+            <li class="grey"><a href="#" class="button" id="basic-sign-up-button"><b>Sign Up</b></a></li>
+        </ul>
+    </div>
+
+    <div class="columns">
+        <div class='image-container'><img src="assets/images/test3.png"></div>
+        <div class='description-container'>
+            <p>{{packages.Bizniz.description}}</p>
+        </div>
+        <ul class="price">
+            <li class="header" id="bizniz-header"><b>{{packages.Bizniz.name}}</b> </li>
+            <li class="grey">
+                <h2><sup>{{packages.Bizniz.currency}}</sup> <b>{{packages.Bizniz.price}}</b> <span class="small">{{packages.Bizniz.term}}</span></h2>
+            </li>
+            <li> <i *ngIf="packages.Bizniz.domain === true" class="fa fa-check-circle bizniz-checks" aria-hidden="true"></i><i *ngIf="packages.Bizniz.domain === false" class="fa ffa-times checks-false" aria-hidden="true"></i>co.za domain </li>
+            <li> <i *ngIf="packages.Bizniz.WebsiteHosting === true" class="fa fa-check-circle bizniz-checks" aria-hidden="true"></i><i *ngIf="packages.Bizniz.WebsiteHosting === false" class="fa fa-times checks-false" aria-hidden="true"></i>Website hosting</li>
+            <li> <i *ngIf="packages.Bizniz.BasicEmail === true" class="fa fa-check-circle bizniz-checks" aria-hidden="true"></i><i *ngIf="packages.Bizniz.BasicEmail === false" class="fa fa-times checks-false" aria-hidden="true"></i>Basic email</li>
+            <li> <i *ngIf="packages.Bizniz.ContenteUpdates === true" class="fa fa-check-circle bizniz-checks" aria-hidden="true"></i><i *ngIf="packages.Bizniz.ContenteUpdates === false" class="fa fa-times checks-false" aria-hidden="true"></i>Contente updates</li>
+            <li> <i *ngIf="packages.Bizniz.Maintenance === true" class="fa fa-check-circle bizniz-checks" aria-hidden="true"></i><i *ngIf="packages.Bizniz.Maintenance === false" class="fa fa-times checks-false" aria-hidden="true"></i>Maintenance</li>
+            <li> <i *ngIf="packages.Bizniz.LandingPage === true" class="fa fa-check-circle bizniz-checks" aria-hidden="true"></i><i *ngIf="packages.Bizniz.LandingPage === false" class="fa fa-times checks-false" aria-hidden="true"></i>Landing page</li>
+            <li> <i *ngIf="packages.Bizniz.ContactForm === true" class="fa fa-check-circle bizniz-checks" aria-hidden="true"></i><i *ngIf="packages.Bizniz.ContactForm === false" class="fa fa-times checks-false" aria-hidden="true"></i>Contact form</li>
+            <li class="grey"><a href="#" class="button" id="bizniz-sign-up-button"><b>Sign Up</b></a></li>
+        </ul>
+    </div>
+
+    <div class="columns">
+        <div class='image-container'><img src="assets/images/test4.png"></div>
+        <div class='description-container'>
+            <p>{{packages.Bonanza.description}}</p>
+        </div>
+        <ul class="price">
+            <li class="header" id="bonanza-header"><b>{{packages.Bonanza.name}}</b></li>
+            <li class="grey">
+                <h2><sup>{{packages.Bonanza.currency}}</sup> <b>{{packages.Bonanza.price}}</b> <span class="small">{{packages.Bonanza.term}}</span></h2>
+            </li>
+            <li><i *ngIf="packages.Bonanza.domain === true" class="fa fa-check-circle bonanza-checks" aria-hidden="true"></i><i *ngIf="packages.Bonanza.domain === false" class="fa ffa-times checks-false" aria-hidden="true"></i> co.za domain </li>
+            <li><i *ngIf="packages.Bonanza.WebsiteHosting === true" class="fa fa-check-circle bonanza-checks" aria-hidden="true"></i><i *ngIf="packages.Bonanza.WebsiteHosting === false" class="fa fa-times checks-false" aria-hidden="true"></i> Website hosting</li>
+            <li> <i *ngIf="packages.Bonanza.BasicEmail === true" class="fa fa-check-circle bonanza-checks" aria-hidden="true"></i><i *ngIf="packages.Bonanza.BasicEmail === false" class="fa fa-times checks-false" aria-hidden="true"></i> Basic email</li>
+            <li><i *ngIf="packages.Bonanza.ContenteUpdates === true" class="fa fa-check-circle bonanza-checks" aria-hidden="true"></i><i *ngIf="packages.Bonanza.ContenteUpdates === false" class="fa fa-times checks-false" aria-hidden="true"></i>Contente updates</li>
+            <li><i *ngIf="packages.Bonanza.Maintenance === true" class="fa fa-check-circle bonanza-checks" aria-hidden="true"></i><i *ngIf="packages.Bonanza.Maintenance === false" class="fa fa-times checks-false" aria-hidden="true"></i> Maintenance</li>
+            <li><i *ngIf="packages.Bonanza.LandingPage === true" class="fa fa-check-circle bonanza-checks" aria-hidden="true"></i><i *ngIf="packages.Bonanza.LandingPage === false" class="fa fa-times checks-false" aria-hidden="true"></i> Landing page</li>
+            <li><i *ngIf="packages.Bonanza.ContactForm === true" class="fa fa-check-circle bonanza-checks" aria-hidden="true"></i><i *ngIf="packages.Bonanza.ContactForm === false" class="fa fa-times checks-false" aria-hidden="true"></i> Contact form</li>
+            <li class="grey"><a href="#" class="button" id="bonanza-sign-up-button"><b>Sign Up</b></a></li>
+        </ul>
+    </div>
+</section>
+<router-outlet></router-outlet>
